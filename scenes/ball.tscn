@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0tuq2aewui1b"]
+
+[ext_resource type="Script" path="res://scenes/ball.gd" id="1_mdc6r"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2u8ek"]
+bounce = 0.5
+
+[sub_resource type="SphereMesh" id="SphereMesh_b6fw8"]
+
+[sub_resource type="Gradient" id="Gradient_frcys"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_r1ecb"]
+gradient = SubResource("Gradient_frcys")
+fill_from = Vector2(1, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lhmux"]
+radius = 0.496074
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dgwt0"]
+radius = 25.0799
+
+[node name="ball" type="RigidBody2D"]
+mass = 51.795
+physics_material_override = SubResource("PhysicsMaterial_2u8ek")
+script = ExtResource("1_mdc6r")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(1, 0, 0, 1)
+scale = Vector2(50.5567, 50.5567)
+mesh = SubResource("SphereMesh_b6fw8")
+texture = SubResource("GradientTexture2D_r1ecb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(50.5567, 50.5567)
+shape = SubResource("CircleShape2D_lhmux")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dgwt0")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]
+[connection signal="mouse_entered" from="Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_on_area_2d_mouse_exited"]

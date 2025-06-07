@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://b6a2isvfmw5kc"]
+
+[ext_resource type="PackedScene" uid="uid://cmhm8id13768i" path="res://menus/templates/select_button.tscn" id="1_3vmox"]
+
+[node name="main menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 646.0
+color = Color(0.572216, 0.000237477, 0.572212, 1)
+
+[node name="select button2" parent="." instance=ExtResource("1_3vmox")]
+layout_mode = 1
+offset_left = 227.0
+offset_top = 16.0
+offset_right = -742.0
+offset_bottom = -490.0
+metadata/load = "gunTest"
+
+[node name="select button" parent="." instance=ExtResource("1_3vmox")]
+layout_mode = 1
+offset_left = 26.0
+offset_top = 15.0
+offset_right = -943.0
+offset_bottom = -491.0
+metadata/load = "test1"

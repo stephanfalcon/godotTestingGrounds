@@ -1,0 +1,47 @@
+[gd_scene load_steps=3 format=3 uid="uid://cmhm8id13768i"]
+
+[ext_resource type="Script" path="res://menus/templates/select_button2.gd" id="1_k14mb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_mixwb"]
+line_spacing = 10.0
+font_size = 32
+
+[node name="select button" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -969.0
+offset_bottom = -506.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_k14mb")
+metadata/poop = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color(0, 1, 0, 0.576471)
+layout_mode = 0
+offset_right = 184.0
+offset_bottom = 135.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 170.0
+offset_bottom = 66.0
+text = "test title
+"
+label_settings = SubResource("LabelSettings_mixwb")
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 87.0
+offset_right = 132.0
+offset_bottom = 118.0
+text = "Start Test"
+metadata/poop = ""
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

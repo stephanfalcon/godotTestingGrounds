@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqbrwthegrmc5"]
+
+[ext_resource type="PackedScene" uid="uid://cmb6qwftlfei4" path="res://scenes/world_boundary.tscn" id="1_xy4lj"]
+[ext_resource type="PackedScene" uid="uid://c4g12kn2iiqyn" path="res://scenes/gun.tscn" id="2_443ce"]
+
+[node name="test2" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "test 2
+"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(193, 108)
+zoom = Vector2(3, 3)
+
+[node name="worldBoundary" parent="." instance=ExtResource("1_xy4lj")]
+
+[node name="gun" parent="." instance=ExtResource("2_443ce")]
+position = Vector2(-1, 106)
