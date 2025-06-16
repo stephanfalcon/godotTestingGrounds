@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://05m4u3pk32sb"]
+
+[ext_resource type="PackedScene" uid="uid://dtdyx3hq1pt6g" path="res://menus/templates/level_select/level_select.tscn" id="1_7nyk6"]
+[ext_resource type="PackedScene" uid="uid://b1hq3iksnimeh" path="res://scenes/objects/characters/player.tscn" id="2_m3vbd"]
+
+[node name="LevelSelect" type="Node2D"]
+
+[node name="LevelSelect" parent="." instance=ExtResource("1_7nyk6")]
+
+[node name="Player" parent="." instance=ExtResource("2_m3vbd")]
+position = Vector2(254, 188)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 1)
+zoom = Vector2(2, 2)

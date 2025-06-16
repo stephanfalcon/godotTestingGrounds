@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://ch4xgxtln0onp"]
+
+[ext_resource type="PackedScene" uid="uid://csjmeit811hys" path="res://scenes/objects/worlds/small.tscn" id="1_odrq3"]
+[ext_resource type="PackedScene" uid="uid://bkkh1u2unnui5" path="res://scenes/objects/terrain/platform.tscn" id="2_p8x2e"]
+[ext_resource type="PackedScene" uid="uid://cehwwggmgg23t" path="res://scenes/objects/characters/playerGrav.tscn" id="3_p8x2e"]
+[ext_resource type="PackedScene" uid="uid://c4g12kn2iiqyn" path="res://scenes/gun.tscn" id="4_r273m"]
+
+[node name="PlatformShoot" type="Node2D"]
+
+[node name="Small" parent="." instance=ExtResource("1_odrq3")]
+
+[node name="Platform" parent="Small" instance=ExtResource("2_p8x2e")]
+position = Vector2(15, 163)
+
+[node name="Platform2" parent="Small" instance=ExtResource("2_p8x2e")]
+position = Vector2(187, 64)
+
+[node name="PlayerGrav" parent="Small" instance=ExtResource("3_p8x2e")]
+position = Vector2(55, 62)
+
+[node name="gun" parent="Small/PlayerGrav" instance=ExtResource("4_r273m")]
+position = Vector2(1, 0)

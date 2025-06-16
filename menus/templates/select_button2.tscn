@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://cmhm8id13768i"]
+[gd_scene load_steps=3 format=3 uid="uid://kdhdffxh0yox"]
 
-[ext_resource type="Script" uid="uid://bpicd1r0aypc5" path="res://menus/templates/select_button2.gd" id="1_k14mb"]
+[ext_resource type="Script" uid="uid://baybogngw6beu" path="res://menus/templates/select_button3.gd" id="1_njhjn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_mixwb"]
 line_spacing = 10.0
@@ -15,7 +15,7 @@ offset_right = -969.0
 offset_bottom = -506.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_k14mb")
+script = ExtResource("1_njhjn")
 metadata/poop = false
 
 [node name="ColorRect" type="ColorRect" parent="."]

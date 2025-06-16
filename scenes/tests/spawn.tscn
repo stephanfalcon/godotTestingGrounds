@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dbxkqxt730w3j"]
+
+[ext_resource type="PackedScene" uid="uid://cmb6qwftlfei4" path="res://scenes/world_boundary.tscn" id="1_o6mjo"]
+[ext_resource type="Script" uid="uid://crb6ri2ehvvy5" path="res://scenes/tests/area_2d.gd" id="2_eq5qc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cdktu"]
+size = Vector2(390, 220)
+
+[node name="Spawn" type="Node2D"]
+
+[node name="worldBoundary" parent="." instance=ExtResource("1_o6mjo")]
+position = Vector2(0, 1)
+
+[node name="Camera2D" type="Camera2D" parent="worldBoundary"]
+position = Vector2(198, 111)
+zoom = Vector2(3, 3)
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, 2)
+script = ExtResource("2_eq5qc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(195, 111)
+shape = SubResource("RectangleShape2D_cdktu")

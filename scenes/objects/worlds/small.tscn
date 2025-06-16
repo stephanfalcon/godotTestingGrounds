@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://csjmeit811hys"]
+
+[ext_resource type="PackedScene" uid="uid://cmb6qwftlfei4" path="res://scenes/world_boundary.tscn" id="1_chv4p"]
+[ext_resource type="PackedScene" uid="uid://dy3i5f4cucfoy" path="res://menus/templates/back_button.tscn" id="2_mfdio"]
+
+[node name="Small" type="Node2D"]
+
+[node name="worldBoundary" parent="." instance=ExtResource("1_chv4p")]
+
+[node name="Camera2D" type="Camera2D" parent="worldBoundary"]
+position = Vector2(197, 112)
+zoom = Vector2(3, 3)
+
+[node name="Backbutton" parent="." instance=ExtResource("2_mfdio")]
+z_index = 100
+offset_left = 5.0
+offset_top = 4.0
+offset_right = 50.0
+offset_bottom = 35.0

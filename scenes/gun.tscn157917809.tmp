@@ -1,12 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4g12kn2iiqyn"]
+[gd_scene load_steps=3 format=3 uid="uid://c4g12kn2iiqyn"]
 
 [ext_resource type="Script" uid="uid://brgxttqmartgp" path="res://gun.gd" id="1_2y0e1"]
 [ext_resource type="Texture2D" uid="uid://crdkbgib5pgee" path="res://icon.svg" id="2_og67c"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_og67c"]
-size = Vector2(91, 8)
-
 [node name="gun" type="StaticBody2D"]
+position = Vector2(-1, 0)
 script = ExtResource("1_2y0e1")
 
 [node name="ColorRect" type="ColorRect" parent="."]
@@ -15,18 +13,11 @@ offset_top = -4.0
 offset_right = 86.0
 offset_bottom = 5.0
 pivot_offset = Vector2(5, 4)
-metadata/_edit_use_anchors_ = true
 
 [node name="Marker2D" type="Marker2D" parent="."]
-modulate = Color(1, 0.0941176, 1, 1)
 position = Vector2(86, 0)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(81.3125, 0.394112)
-scale = Vector2(0.0732421, 0.071967)
+[node name="Sprite2D" type="Sprite2D" parent="Marker2D"]
+position = Vector2(-3, 2)
+scale = Vector2(0.164062, 0.169486)
 texture = ExtResource("2_og67c")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(40.5, 0)
-shape = SubResource("RectangleShape2D_og67c")
-disabled = true

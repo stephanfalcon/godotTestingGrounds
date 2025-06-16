@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://d0tuq2aewui1b"]
 
-[ext_resource type="Script" path="res://scenes/ball.gd" id="1_mdc6r"]
+[ext_resource type="Script" uid="uid://cush1vsqea4f4" path="res://scenes/ball.gd" id="1_mdc6r"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_2u8ek"]
 bounce = 0.5
